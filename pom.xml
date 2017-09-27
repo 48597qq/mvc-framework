@@ -57,6 +57,13 @@
             <version>1.6</version>
         </dependency>
 
+        <!-- Apache DBCP -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
 
         <!-- slf4j核心包-->
         <dependency>
