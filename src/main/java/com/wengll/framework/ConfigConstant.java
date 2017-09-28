@@ -1,6 +1,6 @@
 package com.wengll.framework;
 
-public class ConfigConstant {
+public interface ConfigConstant {
     String CONFIG_FILE = "smart.properties";
 
     String JDBC_DRIVER = "smart.framework.jdbc.driver";
