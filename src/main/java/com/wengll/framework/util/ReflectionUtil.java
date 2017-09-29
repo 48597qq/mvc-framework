@@ -47,9 +47,9 @@ public class ReflectionUtil {
 
     /**
      * 设置成员变量的值
-     * @param obj
-     * @param field
-     * @param value
+     * @param obj 类的实例
+     * @param field 类中的成员变量域
+     * @param value 要设置的值
      */
     public static void setField(Object obj, Field field, Object value){
         try {
