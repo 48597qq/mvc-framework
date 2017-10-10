@@ -46,6 +46,24 @@ public class ReflectionUtil {
     }
 
     /**
+     * 调用方法
+     * @param obj
+     * @param method
+     * @return
+     */
+    public static Object invokeMethod(Object obj, Method method){
+        Object result = null;
+        try {
+            method.setAccessible(true);
+            result = method.invoke(obj);
+        } catch (Exception e){
+            LOGGER.error("invoke method failure", e);
+            throw new RuntimeException(e);
+        }
+        return result;
+    }
+
+    /**
      * 设置成员变量的值
      * @param obj 类的实例
      * @param field 类中的成员变量域
