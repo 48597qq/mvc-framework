@@ -28,6 +28,7 @@ public class BeanHelper {
         return BEAN_MAP;
     }
 
+
     /**
      * 获取Bean实例
      */
@@ -37,5 +38,12 @@ public class BeanHelper {
             throw new RuntimeException("Can not get been by class " + cls);
         }
         return (T) BEAN_MAP.get(cls);
+    }
+
+    /**
+     * 设置bean实例
+     */
+    public static void setBean(Class<?> cls, Object obj){
+        BEAN_MAP.put(cls, obj);
     }
 }

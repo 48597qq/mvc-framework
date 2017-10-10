@@ -1,9 +1,6 @@
 package com.wengll.framework;
 
-import com.wengll.framework.annotation.Controller;
-import com.wengll.framework.helper.BeanHelper;
-import com.wengll.framework.helper.ClassHelper;
-import com.wengll.framework.helper.IocHelper;
+import com.wengll.framework.helper.*;
 import com.wengll.framework.util.ClassUtil;
 
 /**
@@ -12,7 +9,13 @@ import com.wengll.framework.util.ClassUtil;
 public final class HelperLoader {
 
     public static void init(){
-        Class<?>[] classList = {ClassHelper.class, BeanHelper.class, IocHelper.class, Controller.class};
+        Class<?>[] classList = {
+            ClassHelper.class,
+            BeanHelper.class,
+            AopHelper.class,
+            IocHelper.class,
+            ControllerHelper.class
+        };
         for(Class<?> cls : classList){
             ClassUtil.loadClass(cls.getName(), true);
         }
